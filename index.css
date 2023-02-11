@@ -1,0 +1,100 @@
+:root {
+    /* colors */
+    --background-black: rgb(28 28 28);
+    --main-white: rgb(255 255 255);
+    --background-gray: rgb(244 244 244);
+    --input-section-purple: rgb(105 67 255);
+    --input-border-purple: rgb(178 149 255);
+    --unit-title-purple: rgb(90 83 123);
+    --unit-output-black: rgb(53 53 53);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-black);
+    color: var(--main-white);
+    max-height: 100vh;
+}
+
+.container {
+    font-family: 'Inter', Helvetica, sans-serif;
+    background-color: var(--background-gray);
+    max-width: 34.375rem; 
+    min-height: 45.5625rem;
+    margin: 7rem auto;
+    text-align: center;
+}
+
+.input-section {
+    background-color: var(--input-section-purple);
+    display: flex;
+    flex-direction: column;
+}
+
+.converter-title {
+    margin-top: 2.125rem;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.357;
+}
+
+.unit-input {
+    max-width: 25%;
+    margin: 1.875rem auto 1.5625rem auto;
+    border: 2px solid var(--input-border-purple);
+    background-color: var(--input-section-purple);
+    color: var(--main-white);
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 3.625rem;
+    line-height: 1.375;
+    text-align: center;
+}
+
+.unit-input:focus, .unit-input:hover {
+    border: 2px solid var(--main-white);
+}
+
+.convert-btn {
+    margin: 0 auto 2.125rem;
+    padding: 0.5625rem 2.25rem;
+    border: 1px solid var(--input-section-purple);
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.convert-btn:focus, .convert-btn:hover {
+    background-color: var(--unit-output-black);
+    color: var(--main-white);
+    border: 1px solid var(--input-border-purple);
+}
+
+.output {
+    background-color: var(--main-white);
+    margin: 1.5rem;
+}
+
+.length-output {
+    margin-top: 2.25rem;
+}
+
+.unit-title {
+    color: var(--unit-title-purple);
+}
+
+.unit-output {
+    color: var(--unit-output-black);
+}
+
+/* Utility classes */
+.rounded {
+    border-radius: .375rem;
+}
