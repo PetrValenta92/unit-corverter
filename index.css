@@ -1,16 +1,25 @@
 :root {
   /* colors */
 
-  --main-black: rgb(28 28 28);
-  --main-white: rgb(255 255 255);
-  --background-gray: rgb(244 244 244);
-  --background-gray-dark-mode: rgb(31 41 55);
-  --input-section-indigo: rgb(1 79 134);
-  --input-border-indigo: rgb(137 194 217);
-  --unit-title-indigo: rgb(1 42 74);
-  --unit-title-indigo-dark-mode: rgb(97 165 194);
-  --unit-output-dark-mode: rgb(39 53 73);
-  --unit-output-text-black: rgb(53 53 53);
+  --black-color: rgb(28 28 28);
+  --white-color: rgb(255 255 255);
+  --bg-color: rgb(244 244 244);
+  --converter-title: rgb(255 255 255);
+  --input-section-bg-color: rgb(1 79 134);
+  --input-border-color: rgb(137 194 217);
+  --unit-bg-color: rgb(255 255 255);
+  --unit-title-color: rgb(1 42 74);
+  --unit-text-color: rgb(53 53 53);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: rgb(31 41 55);
+    --converter-title: rgb(244 244 244);
+    --unit-bg-color: rgb(39 53 73);
+    --unit-title-color: rgb(97 165 194);
+    --unit-text-color: rgb(244 244 244);
+  }
 }
 
 * {
@@ -20,43 +29,41 @@
 }
 
 body {
-  background-color: var(--main-black);
-  color: var(--main-white);
+  background-color: var(--black-color);
+  color: var(--white-color);
   max-height: 100vh;
-}
-
-.dark-mode {
 }
 
 .container {
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  background-color: var(--background-gray);
+  background-color: var(--bg-color);
   max-width: 34.375rem;
   margin: 7rem auto;
   text-align: center;
 }
 
 .input-section {
-  background-color: var(--input-section-indigo);
+  background-color: var(--input-section-bg-color);
   display: flex;
   flex-direction: column;
 }
 
 .converter-title {
   margin-top: 2.125rem;
+  color: var(--converter-title);
   font-size: 1.75rem;
   font-weight: 800;
   line-height: 1.357;
 }
 
 .unit-input {
-  max-width: 25%;
+  max-width: 45%;
   margin: 0.75rem auto 1.5625rem auto;
-  border: 2px solid var(--input-border-indigo);
-  background-color: var(--input-section-indigo);
-  color: var(--main-white);
+  border: 2px solid var(--input-border-color);
+  background-color: var(--input-section-bg-color);
+  color: var(--white-color);
   font-family: "Inter", Helvetica, sans-serif;
   font-weight: 800;
   font-size: 3.625rem;
@@ -66,13 +73,13 @@ body {
 
 .unit-input:focus,
 .unit-input:hover {
-  border: 2px solid var(--main-white);
+  border: 2px solid var(--white-color);
 }
 
 .convert-btn {
   margin: 0 auto 2.125rem;
-  padding: 0.5625rem 2.25rem;
-  border: 1px solid var(--input-section-indigo);
+  padding: 0.5625rem 2rem;
+  border: 1px solid var(--input-section-bg-color);
   font-family: "Inter", Helvetica, sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -82,9 +89,9 @@ body {
 
 .convert-btn:focus,
 .convert-btn:hover {
-  background-color: var(--unit-output-text-black);
-  color: var(--main-white);
-  border: 1px solid var(--input-border-indigo);
+  background-color: var(--unit-text-color);
+  color: var(--white-color);
+  border: 1px solid var(--input-border-color);
 }
 
 .unit-outputs-section {
@@ -93,7 +100,7 @@ body {
 }
 
 .unit-output {
-  background-color: var(--main-white);
+  background-color: var(--unit-bg-color);
   margin: 0 1.5rem 1.5rem;
 }
 
@@ -107,7 +114,7 @@ body {
 
 .unit-output-title {
   margin: 2rem 4.875rem 0.25rem;
-  color: var(--unit-title-indigo);
+  color: var(--unit-title-color);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1;
@@ -116,7 +123,7 @@ body {
 .unit-output-text {
   margin: 0.75rem;
   padding: 0.25rem 0 0.5rem;
-  color: var(--unit-output-text-black);
+  color: var(--unit-text-color);
   font-size: 0.875rem;
   line-height: 1.25;
 }
