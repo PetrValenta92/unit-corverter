@@ -36,7 +36,7 @@ Light mode design
 ![Light mode - default](./images/screenshots/Light_mode.png)
 
 Dark mode design
-![Dark mode](./images/screenshots/Dark_mode.png)
+![Dark mode](./images/screenshots/dark_mode.png)
 
 State: Active
 ![State: Active](./images/screenshots/in_use.png)
