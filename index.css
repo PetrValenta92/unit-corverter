@@ -1,12 +1,19 @@
 :root {
   /* colors */
 
-  --black-color: rgb(28 28 28);
-  --white-color: rgb(255 255 255);
-  --bg-color: rgb(244 244 244);
-  --converter-title: rgb(255 255 255);
+  --bg-black-color: rgb(28 28 28);
+  --container-bg-color: rgb(244 244 244);
+  --converter-title-color: rgb(255 255 255);
   --input-section-bg-color: rgb(1 79 134);
-  --input-border-color: rgb(137 194 217);
+  --unit-input-color: rgb(255 255 255);
+  --unit-input-border-color: rgb(137 194 217);
+  --unit-input-border-hover-color: rgb(255 255 255);
+  --convert-btn-color: rgb(1 42 74);
+  --convert-btn-hover-color: rgb(255 255 255);
+  --convert-btn-bg-color: rgb(244 244 244);
+  --convert-btn-bg-hover-color: rgb(53 53 53);
+  --convert-btn-border-color: rgb(1 79 134);
+  --convert-btn-border-hover-color: rgb(137 194 217);
   --unit-bg-color: rgb(255 255 255);
   --unit-title-color: rgb(1 42 74);
   --unit-text-color: rgb(53 53 53);
@@ -14,8 +21,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: rgb(31 41 55);
-    --converter-title: rgb(244 244 244);
+    --container-bg-color: rgb(31 41 55);
+    --converter-title-color: rgb(244 244 244);
+    --unit-input-color: rgb(244 244 244);
+    --unit-input-border-color: rgb(97 165 194);
+    --unit-input-border-hover-color: rgb(244 244 244);
+    --convert-btn-color: rgb(39 53 73);
+    --convert-btn-hover-color: rgb(244 244 244);
+    --convert-btn-border-hover-color: rgb(97 165 194);
     --unit-bg-color: rgb(39 53 73);
     --unit-title-color: rgb(97 165 194);
     --unit-text-color: rgb(244 244 244);
@@ -29,8 +42,7 @@
 }
 
 body {
-  background-color: var(--black-color);
-  color: var(--white-color);
+  background-color: var(--bg-black-color);
   max-height: 100vh;
 }
 
@@ -38,7 +50,7 @@ body {
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  background-color: var(--bg-color);
+  background-color: var(--container-bg-color);
   max-width: 34.375rem;
   margin: 7rem auto;
   text-align: center;
@@ -52,7 +64,7 @@ body {
 
 .converter-title {
   margin-top: 2.125rem;
-  color: var(--converter-title);
+  color: var(--converter-title-color);
   font-size: 1.75rem;
   font-weight: 800;
   line-height: 1.357;
@@ -60,10 +72,10 @@ body {
 
 .unit-input {
   max-width: 45%;
-  margin: 0.75rem auto 1.5625rem auto;
-  border: 2px solid var(--input-border-color);
+  margin: 1.5rem auto 1.5625rem auto;
+  border: 2px solid var(--unit-input-border-color);
   background-color: var(--input-section-bg-color);
-  color: var(--white-color);
+  color: var(--unit-input-color);
   font-family: "Inter", Helvetica, sans-serif;
   font-weight: 800;
   font-size: 3.625rem;
@@ -73,13 +85,15 @@ body {
 
 .unit-input:focus,
 .unit-input:hover {
-  border: 2px solid var(--white-color);
+  border: 2px solid var(--unit-input-border-hover-color);
 }
 
 .convert-btn {
   margin: 0 auto 2.125rem;
   padding: 0.5625rem 2rem;
-  border: 1px solid var(--input-section-bg-color);
+  border: 1px solid var(--convert-btn-border-color);
+  background-color: var(--convert-btn-bg-color);
+  color: var(--convert-btn-color);
   font-family: "Inter", Helvetica, sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -89,9 +103,9 @@ body {
 
 .convert-btn:focus,
 .convert-btn:hover {
-  background-color: var(--unit-text-color);
-  color: var(--white-color);
-  border: 1px solid var(--input-border-color);
+  background-color: var(--convert-btn-bg-hover-color);
+  color: var(--convert-btn-hover-color);
+  border: 1px solid var(--unit-input-border-color);
 }
 
 .unit-outputs-section {
